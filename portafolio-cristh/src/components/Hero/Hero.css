@@ -1,0 +1,219 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 70% 30%, rgb(255 255 255 / 62%), transparent 32%),
+    #efeee9;
+  color: #222220;
+}
+
+.hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+  content: '';
+  opacity: 0.17;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.hero__rail {
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: 6;
+  display: flex;
+  width: 3.25rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: #efeee9;
+  background: #222220;
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+}
+
+.hero__rail::after {
+  position: absolute;
+  top: 51%;
+  right: -1.15rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  background: #222220;
+  content: '';
+}
+
+.hero__rail-line {
+  width: 1px;
+  height: 5rem;
+  background: rgb(239 238 233 / 45%);
+}
+
+.hero__monogram {
+  position: absolute;
+  top: 5%;
+  left: 43%;
+  z-index: 1;
+  color: transparent;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: min(49vw, 45rem);
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -0.27em;
+  opacity: 0.17;
+  transform: rotate(-8deg) scaleX(0.55);
+  transform-origin: top left;
+  -webkit-text-stroke: 1px #77746d;
+  pointer-events: none;
+}
+
+
+.hero__intro {
+  top: 62%;
+  left: 24.5%;
+  font-size: 1rem;
+}
+
+.hero__description {
+  top: 70%;
+  left: 34.5%;
+  font-size: 1rem;
+}
+
+.hero__footer {
+  position: absolute;
+  right: 4%;
+  bottom: 3.5%;
+  left: 7%;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .hero .hero__intro {
+    left: 16%;
+  }
+
+  .hero .hero__description {
+    left: 34%;
+  }
+
+  .hero__caption,
+  .portrait {
+    right: 10%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    display: flex;
+    min-height: max(100svh, 50rem);
+    flex-direction: column;
+    padding: 7rem clamp(1.1rem, 5vw, 2.5rem) 3rem;
+  }
+
+  .hero__monogram {
+    top: 25%;
+    left: 9%;
+    font-size: 95vw;
+    opacity: 0.12;
+  }
+
+  #hero-title {
+    display: contents;
+  }
+
+  .hero .hero__intro {
+    order: 2;
+    align-self: flex-end;
+    width: min(48%, 16rem);
+    max-width: calc(100% - 2rem);
+    margin-top: 2.6rem;
+    margin-right: 5rem;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .hero .hero__description {
+    order: 4;
+    align-self: flex-end;
+    width: min(56%, 18rem);
+    max-width: calc(100% - 2rem);
+    margin-top: 3.25rem;
+    margin-right: 9rem;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .hero__footer {
+    position: relative;
+    inset: auto;
+    order: 5;
+    width: max-content;
+    margin-top: auto;
+    padding-top: 4rem;
+    font-size: 0.76rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero {
+    padding-inline: 1rem;
+  }
+
+  .hero__intro {
+    width: 52%;
+    margin-right: 0.75rem;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .hero__description {
+    width: 62%;
+    margin-right: 0.75rem;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .editorial-title span {
+    animation: reveal 1500ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .editorial-title span:nth-child(2) {
+    animation-delay: 19ms;
+  }
+
+  .editorial-title span:nth-child(3) {
+    animation-delay: 40ms;
+  }
+
+  .portrait {
+    animation: portrait-in 1500ms  cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes portrait-in {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 0 0 0);
+  }
+}

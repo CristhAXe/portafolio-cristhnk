@@ -1,0 +1,43 @@
+.portrait {
+  position: absolute;
+  top: 59%;
+  right: 21.5%;
+  z-index: 2;
+  width: clamp(10rem, 14vw, 17.5rem);
+  margin: 0;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 22%;
+  filter: grayscale(100%) contrast(1.09);
+}
+
+.portrait figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.55rem;
+  letter-spacing: 0.11em;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 0.86rem;
+}
+
+@media (max-width: 900px) {
+  .portrait {
+    position: relative;
+    inset: auto;
+    order: 3;
+    align-self: flex-end;
+    width: min(59%, 20rem);
+    margin-top: 1.4rem;
+    margin-right: clamp(0.4rem, 5vw, 2.5rem);
+  }
+
+  .portrait figcaption {
+    font-size: 0.48rem;
+    letter-spacing: 0.12em;
+  }
+}

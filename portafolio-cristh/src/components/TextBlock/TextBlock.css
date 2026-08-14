@@ -1,0 +1,21 @@
+.text-block {
+  position: absolute;
+  z-index: 4;
+  width: 14.5rem;
+  margin: 0;
+  font-size: clamp(0.62rem, 0.72vw, 0.84rem);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+
+@media (max-width: 900px) {
+  .text-block {
+    position: relative;
+    inset: auto;
+    max-width: 100%;
+    font-size: clamp(0.7rem, 2.8vw, 0.82rem);
+    line-height: 1.4;
+    text-align: left;
+    overflow-wrap: anywhere;
+  }
+}
