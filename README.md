@@ -1,7 +1,7 @@
 # portafolio
 
 <p align="center">
-  <img src="assets/portafolio.png" width="100" height="100">
+  <img src="assets/portafolio.png" width="300" height="300">
 </p>
 
 <p align="center">
