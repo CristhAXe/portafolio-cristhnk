@@ -1,7 +1,7 @@
 # portafolio
 
 <p align="center">
-  <img src="assets/portafolio.webp">
+  <img src="assets/portafolio.png">
 </p>
 
 <p align="center">
