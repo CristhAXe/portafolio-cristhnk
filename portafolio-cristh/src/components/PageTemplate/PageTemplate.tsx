@@ -37,7 +37,7 @@ const contacts: Contact[] = [
 
 function ContactIcon({ icon }: { icon: Contact['icon'] }) {
   if (icon === 'github') {
-    return <svg aria-hidden="true"><use href="/icons.svg#github-icon" /></svg>
+    return <svg aria-hidden="true"><use href={`${import.meta.env.BASE_URL}icons.svg#github-icon`} /></svg>
   }
 
   if (icon === 'linkedin') {
