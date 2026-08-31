@@ -189,10 +189,6 @@
   background: #efeee9;
 }
 
-.project-card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-}
-
 .project-preview {
   position: relative;
   display: flex;
@@ -401,6 +397,13 @@
 @media (min-width: 761px) and (max-width: 1180px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1181px) {
+  .projects-grid:has(> .project-card:last-child:nth-child(odd))::after {
+    background: #efeee9;
+    content: '';
   }
 }
 
