@@ -53,7 +53,7 @@ const projects: Project[] = [
     number: '01',
     title: 'Michi Teach',
     category: 'The Next Craft Hackathon — 1.er lugar Arequipa',
-    text: 'Asistente contextual de aprendizaje con IA que analiza la pantalla del usuario y genera ayuda personalizada en tiempo real mediante IA multimodal, RAG y documentación contextual. Participé en el desarrollo e integración del MVP con servicios de IA, persistencia y funcionalidades en tiempo real mediante Convex.',
+    text: 'Asistente de aprendizaje que analiza la pantalla y ofrece ayuda contextual en tiempo real con IA multimodal y RAG. Participé en el desarrollo del MVP y la integración de IA, persistencia y funciones en tiempo real con Convex.',
     stack: ['JavaScript', 'Tauri', 'Convex', 'OpenAI', 'RAG', 'Vector Search', 'Tavily'],
     url: 'https://github.com/0wex/michi-teach/tree/main',
     demoUrl: 'https://drive.google.com/file/d/1N2gov0zZvOnSMF8gFQEFwvMGepVbefzL/view?usp=drive_link',
@@ -62,7 +62,7 @@ const projects: Project[] = [
   {
     number: '02',
     title: 'AI Guestbook',
-    category: 'Hackathon / Cloud',
+    category: 'OPIT Summer Tech Bootcamp',
     text: 'Libro de visitas full stack que almacena mensajes y detecta su sentimiento en tiempo real con servicios de AWS.',
     stack: ['AWS Lambda', 'DynamoDB', 'Comprehend', 'Python'],
     url: 'https://github.com/CristhAXe/OPIT-summer-tech-Bootcamp-cloud-project',
@@ -72,9 +72,10 @@ const projects: Project[] = [
     number: '03',
     title: 'incloudy',
     category: 'Realtime Hackathon 2026',
-    text: 'Plataforma colaborativa y privada para acompañar casos educativos mediante salas en tiempo real y orientación asistida por IA.',
+    text: 'Plataforma privada para acompañar casos educativos mediante colaboración en tiempo real y orientación asistida por IA.',
     stack: ['React', 'FastAPI', 'MongoDB', 'Portal', 'Gemini'],
     url: 'https://github.com/realtime-hackaton-2026/incloudy',
+    demoUrl: 'https://incloudy-lovat.vercel.app',
     preview: 'incloudy',
   },
   {
@@ -172,9 +173,9 @@ const pagesEn: Record<ContentPage, PageContent> = {
 }
 
 const projectEnglish = [
-  { category: 'The Next Craft Hackathon — 1st place in Arequipa', text: 'AI-powered contextual learning assistant that analyzes the user’s screen and provides personalized help in real time using multimodal AI, RAG and contextual documentation. I contributed to the MVP development and integration of AI services, persistence and real-time features with Convex.' },
-  { category: 'Hackathon / Cloud', text: 'Full-stack guestbook that stores messages and detects their sentiment in real time using AWS services.' },
-  { category: 'Realtime Hackathon 2026', text: 'Private collaborative platform for supporting educational cases through real-time rooms and AI-assisted guidance.' },
+  { category: 'The Next Craft Hackathon — 1st place in Arequipa', text: 'Learning assistant that analyzes the screen and provides contextual help in real time with multimodal AI and RAG. I contributed to the MVP and integrated AI, persistence and real-time features with Convex.' },
+  { category: 'OPIT Summer Tech Bootcamp', text: 'Full-stack guestbook that stores messages and detects their sentiment in real time using AWS services.' },
+  { category: 'Realtime Hackathon 2026', text: 'Private platform for supporting educational cases through real-time collaboration and AI-assisted guidance.' },
   { category: 'Local AI / RAG', text: 'Private knowledge workspace that indexes documents and enables semantic search with locally hosted AI.' },
   { category: 'Product / Finance', text: 'Application focused on organizing and visualizing personal finances through a clear and accessible experience.' },
 ]

@@ -189,6 +189,10 @@
   background: #efeee9;
 }
 
+.project-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .project-preview {
   position: relative;
   display: flex;
