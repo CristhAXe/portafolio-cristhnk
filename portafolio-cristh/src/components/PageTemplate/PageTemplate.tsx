@@ -18,6 +18,7 @@ type Project = {
   text: string
   stack: string[]
   url: string
+  demoUrl?: string
   preview: string
 }
 
@@ -50,6 +51,16 @@ function ContactIcon({ icon }: { icon: Contact['icon'] }) {
 const projects: Project[] = [
   {
     number: '01',
+    title: 'Michi Teach',
+    category: 'The Next Craft Hackathon — 1.er lugar Arequipa',
+    text: 'Asistente contextual de aprendizaje con IA que analiza la pantalla del usuario y genera ayuda personalizada en tiempo real mediante IA multimodal, RAG y documentación contextual. Participé en el desarrollo e integración del MVP con servicios de IA, persistencia y funcionalidades en tiempo real mediante Convex.',
+    stack: ['JavaScript', 'Tauri', 'Convex', 'OpenAI', 'RAG', 'Vector Search', 'Tavily'],
+    url: 'https://github.com/0wex/michi-teach/tree/main',
+    demoUrl: 'https://drive.google.com/file/d/1N2gov0zZvOnSMF8gFQEFwvMGepVbefzL/view?usp=drive_link',
+    preview: 'michiteach',
+  },
+  {
+    number: '02',
     title: 'AI Guestbook',
     category: 'Hackathon / Cloud',
     text: 'Libro de visitas full stack que almacena mensajes y detecta su sentimiento en tiempo real con servicios de AWS.',
@@ -58,7 +69,7 @@ const projects: Project[] = [
     preview: 'guestbook',
   },
   {
-    number: '02',
+    number: '03',
     title: 'incloudy',
     category: 'Realtime Hackathon 2026',
     text: 'Plataforma colaborativa y privada para acompañar casos educativos mediante salas en tiempo real y orientación asistida por IA.',
@@ -67,7 +78,7 @@ const projects: Project[] = [
     preview: 'incloudy',
   },
   {
-    number: '03',
+    number: '04',
     title: 'MindVault',
     category: 'IA local / RAG',
     text: 'Espacio privado de conocimiento que indexa documentos y permite realizar búsquedas semánticas con IA local.',
@@ -76,7 +87,7 @@ const projects: Project[] = [
     preview: 'mindvault',
   },
   {
-    number: '04',
+    number: '05',
     title: 'Pig Save',
     category: 'Producto / Finanzas',
     text: 'Aplicación enfocada en organizar y visualizar finanzas personales mediante una experiencia clara y accesible.',
@@ -161,6 +172,7 @@ const pagesEn: Record<ContentPage, PageContent> = {
 }
 
 const projectEnglish = [
+  { category: 'The Next Craft Hackathon — 1st place in Arequipa', text: 'AI-powered contextual learning assistant that analyzes the user’s screen and provides personalized help in real time using multimodal AI, RAG and contextual documentation. I contributed to the MVP development and integration of AI services, persistence and real-time features with Convex.' },
   { category: 'Hackathon / Cloud', text: 'Full-stack guestbook that stores messages and detects their sentiment in real time using AWS services.' },
   { category: 'Realtime Hackathon 2026', text: 'Private collaborative platform for supporting educational cases through real-time rooms and AI-assisted guidance.' },
   { category: 'Local AI / RAG', text: 'Private knowledge workspace that indexes documents and enables semantic search with locally hosted AI.' },
@@ -207,7 +219,12 @@ export function PageTemplate({ page, language }: PageTemplateProps) {
                 <ul className="project-card__stack" aria-label={language === 'es' ? 'Tecnologías' : 'Technologies'}>
                   {project.stack.map((technology) => <li key={technology}>{technology}</li>)}
                 </ul>
-                <a className="project-card__link" href={project.url} target="_blank" rel="noreferrer">{language === 'es' ? 'Ver repositorio' : 'View repository'} <span>↗</span></a>
+                <div className="project-card__links">
+                  {project.demoUrl && (
+                    <a className="project-card__link" href={project.demoUrl} target="_blank" rel="noreferrer">{language === 'es' ? 'Ver demo' : 'View demo'} <span>↗</span></a>
+                  )}
+                  <a className="project-card__link" href={project.url} target="_blank" rel="noreferrer">{language === 'es' ? 'Ver repositorio' : 'View repository'} <span>↗</span></a>
+                </div>
               </div>
             </article>
             )

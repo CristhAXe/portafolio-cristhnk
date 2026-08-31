@@ -272,6 +272,7 @@
 .project-preview__scene > span:last-child { width: 52%; }
 
 .project-preview--guestbook { background: #253729; }
+.project-preview--michiteach { background: #604526; }
 .project-preview--incloudy { background: #273d58; }
 .project-preview--mindvault { background: #3b2b43; }
 .project-preview--pigsave { background: #68443c; }
@@ -319,6 +320,11 @@
   border: 1px solid rgb(34 34 32 / 30%);
   border-radius: 999px;
   font-size: 0.65rem;
+}
+
+.project-card__links {
+  display: grid;
+  gap: 0.65rem;
 }
 
 .project-card__link {
