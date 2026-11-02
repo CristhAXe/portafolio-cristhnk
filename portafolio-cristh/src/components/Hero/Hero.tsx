@@ -1,5 +1,4 @@
 import { EditorialTitle } from '../EditorialTitle/EditorialTitle'
-import { Portrait } from '../Portrait/Portrait'
 import { TextBlock } from '../TextBlock/TextBlock'
 import './Hero.css'
 import type { Language } from '../../App'
@@ -16,17 +15,17 @@ export function Hero({ language }: { language: Language }) {
         <EditorialTitle lines={['Software', 'Developer', 'Cristhian']} />
       </div>
 
-      <TextBlock className="hero__intro">
-        {language === 'es' ? 'Desarrollador enfocado en backend' : 'Backend focused Developer'}
-      </TextBlock>
+      <div className="hero__copy">
+        <TextBlock className="hero__intro">
+          {language === 'es' ? 'Desarrollador enfocado en backend' : 'Backend focused Developer'}
+        </TextBlock>
 
-      <TextBlock className="hero__description">
-        {language === 'es'
-          ? 'Curioso por naturaleza, convierto ideas en soluciones digitales mientras aprendo, experimento y mejoro con cada proyecto.'
-          : 'Curious by nature, I turn ideas into digital solutions while learning, experimenting and improving with every project.'}
-      </TextBlock>
-
-      <Portrait language={language} />
+        <TextBlock className="hero__description">
+          {language === 'es'
+            ? 'Curioso por naturaleza, convierto ideas en soluciones digitales mientras aprendo, experimento y mejoro con cada proyecto.'
+            : 'Curious by nature, I turn ideas into digital solutions while learning, experimenting and improving with every project.'}
+        </TextBlock>
+      </div>
 
       <div className="hero__footer" aria-hidden="true">
         <span>Arequipa, Peru</span>
