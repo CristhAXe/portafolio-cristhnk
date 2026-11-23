@@ -13,7 +13,13 @@
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 22%;
-  filter: grayscale(100%) contrast(1.09);
+  filter: grayscale(1) contrast(1.09);
+  transition: filter 280ms ease;
+}
+
+.portrait:hover img,
+.portrait img:hover {
+  filter: none;
 }
 
 .portrait figcaption {

@@ -3,7 +3,7 @@
 :root {
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: #202020;
-  background: #161616;
+  background: #14120b;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -14,13 +14,20 @@
 
 html {
   min-width: 320px;
-  background: #161616;
+  background: #14120b;
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  background: #14120b;
+}
+
+strong,
+b {
+  color: #f54e00;
+  font-weight: 600;
 }
 
 button,
@@ -31,6 +38,14 @@ textarea {
 
 img {
   max-width: 100%;
+  filter: grayscale(1);
+  transition: filter 280ms ease;
+}
+
+img:hover,
+a:hover img,
+figure:hover img {
+  filter: none;
 }
 
 ::selection {

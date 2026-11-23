@@ -18,7 +18,6 @@ export function Navbar({ activePage, language, onLanguageChange }: NavbarProps) 
   return (
     <header className="navbar-shell">
       <nav className="navbar" aria-label={language === 'es' ? 'Navegación principal' : 'Main navigation'}>
-
         <div className="navbar__links">
           {pageIds.map((id) => (
             <a
@@ -31,9 +30,23 @@ export function Navbar({ activePage, language, onLanguageChange }: NavbarProps) 
             </a>
           ))}
         </div>
-        <button className="navbar__language" type="button" onClick={() => onLanguageChange(language === 'es' ? 'en' : 'es')} aria-label={language === 'es' ? 'Cambiar idioma a inglés' : 'Switch language to Spanish'}>
-          {language === 'es' ? 'EN' : 'ES'}
-        </button>
+        <div className="navbar__actions">
+          <button
+            className="navbar__language"
+            type="button"
+            onClick={() => onLanguageChange(language === 'es' ? 'en' : 'es')}
+            aria-label={language === 'es' ? 'Switch to English' : 'Switch to Spanish'}
+          >
+            <svg className="navbar__language-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.6" />
+              <path d="M3 12h18M12 3c2.4 2.7 3.6 5.7 3.6 9s-1.2 6.3-3.6 9c-2.4-2.7-3.6-5.7-3.6-9s1.2-6.3 3.6-9z" fill="none" stroke="currentColor" strokeWidth="1.6" />
+            </svg>
+            {language === 'es' ? 'English' : 'Spanish'}
+          </button>
+          <a className="navbar__pill" href="#contacto">
+            {language === 'es' ? 'Contactarme' : 'Contact'}
+          </a>
+        </div>
       </nav>
     </header>
   )

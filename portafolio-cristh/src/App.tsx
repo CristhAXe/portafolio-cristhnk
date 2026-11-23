@@ -32,7 +32,12 @@ function App() {
   return (
     <>
       <Navbar activePage={page} language={language} onLanguageChange={setLanguage} />
-      <main>{page === 'inicio' ? <Hero language={language} /> : <PageTemplate page={page} language={language} />}</main>
+      <a className="skip-link" href="#main-content">
+        {language === 'es' ? 'Ir al contenido' : 'Skip to content'}
+      </a>
+      <main id="main-content" tabIndex={-1}>
+        {page === 'inicio' ? <Hero language={language} /> : <PageTemplate page={page} language={language} />}
+      </main>
     </>
   )
 }
