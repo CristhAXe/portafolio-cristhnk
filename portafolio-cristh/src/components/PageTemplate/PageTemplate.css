@@ -122,6 +122,10 @@
   stroke-linejoin: round;
 }
 
+.contact-card svg.contact-card__brand-icon {
+  stroke: none;
+}
+
 .contact-card h2,
 .contact-card__arrow {
   color: #f54e00;
@@ -458,6 +462,11 @@
   outline: none;
 }
 
+.contact-card:hover svg,
+.contact-card:focus-visible svg {
+  color: #e9e9e4;
+}
+
 .projects-grid {
   border-color: #3f3f3b;
   background: #3f3f3b;
@@ -686,6 +695,33 @@
   color: #f54e00;
   font-size: 0.95rem;
   font-weight: 500;
+}
+
+.about__actions {
+  margin-top: 1.25rem;
+}
+
+.about__cv-button {
+  display: inline-flex;
+  min-height: 2.6rem;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid #f54e00;
+  border-radius: 0.45rem;
+  color: #14120b;
+  background: #f54e00;
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+
+.about__cv-button:hover,
+.about__cv-button:focus-visible {
+  border-color: #ff6a2a;
+  background: #ff6a2a;
+  outline: none;
 }
 
 .about h2 {
