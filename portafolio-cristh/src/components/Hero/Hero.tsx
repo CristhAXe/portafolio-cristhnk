@@ -7,18 +7,18 @@ import type { Language } from '../../App'
 export function Hero({ language }: { language: Language }) {
   const copy = language === 'es'
     ? {
-        statement: 'Desarrollador de software. Llevo la inteligencia artificial al producto para que cada entrega se note en el negocio.',
-        detail: 'Python · FastAPI · PostgreSQL · Docker · APIs · IA',
+        statement: 'Software Engineer backend con Python y FastAPI. Llevo la IA —y el desarrollo con agentes— al producto para que cada entrega se note en el negocio.',
+        detail: 'Python · FastAPI · PostgreSQL · SQLAlchemy · Alembic · Agentic AI',
         projects: 'Ver proyectos',
         contact: 'Contactarme',
-        focus: ['Software Engineer', 'Backend Systems · IA · Cloud'],
+        focus: ['Software Engineer', 'Backend Python · FastAPI · Agentic Software Development'],
       }
     : {
-        statement: 'Software developer. I bring AI into the product so every release shows up in the business.',
-        detail: 'Python · FastAPI · PostgreSQL · Docker · APIs · AI',
+        statement: 'Backend Software Engineer with Python and FastAPI. I bring AI —and agentic development— into the product so every release shows up in the business.',
+        detail: 'Python · FastAPI · PostgreSQL · SQLAlchemy · Alembic · Agentic AI',
         projects: 'View projects',
         contact: 'Get in touch',
-        focus: ['Software Engineer', 'Backend Systems · AI · Cloud'],
+        focus: ['Software Engineer', 'Backend Python · FastAPI · Agentic Software Development'],
       }
 
   return (
