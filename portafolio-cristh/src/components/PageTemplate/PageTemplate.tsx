@@ -40,8 +40,8 @@ type Contact = {
 }
 
 const cvUrls: Record<Language, string> = {
-  es: 'https://docs.google.com/document/d/1o0YbSSe0XF938EJcij-VAHSb1A27BjjVVxP71FLISPc/edit?usp=sharing',
-  en: 'https://docs.google.com/document/d/1EA4N3cRoaVHHfp_9EyR6Q-CXGEbsQ0tBMUEEnoIIUns/edit?usp=sharing',
+  es: 'https://docs.google.com/document/d/1zQCpE-aCUV5xdOjbLiHfPW3USqIxA6LR00NSul9PoS4/edit?usp=sharing',
+  en: 'https://docs.google.com/document/d/1lrmUYM4_M9rnnRk8-6-ZsGsdMpyfAgh35FCEShWIg10/edit?usp=sharing',
 }
 
 const contactNotes = {
