@@ -48,10 +48,10 @@ export function Hero({ language }: { language: Language }) {
           </figure>
           <div className="hero__actions">
             <a className="hero__button hero__button--primary" href="#proyectos">
-              {copy.projects} <span aria-hidden="true">↗</span>
+              {copy.projects}
             </a>
             <a className="hero__button" href="#contacto">
-              {copy.contact} <span aria-hidden="true">↗</span>
+              {copy.contact}
             </a>
           </div>
         </div>
