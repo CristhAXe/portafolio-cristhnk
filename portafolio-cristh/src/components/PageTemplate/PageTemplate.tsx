@@ -95,8 +95,8 @@ const projects: Project[] = [
     number: '01',
     title: 'Michi Teach',
     category: 'The Next Craft Hackathon — 1.er lugar en Arequipa y Perú · 2.º lugar en LATAM',
-    text: 'Asistente de aprendizaje que analiza la pantalla y ofrece ayuda contextual en tiempo real con IA multimodal y RAG. Participé en el desarrollo del MVP y la integración de IA, persistencia y funciones en tiempo real con Convex.',
-    highlights: ['Asistente de aprendizaje contextual', 'Análisis de pantalla en tiempo real', 'Base de conocimiento con RAG'],
+    text: 'App de escritorio que asiste al usuario en tiempo real con IA multimodal y RAG según su contexto visual. Creé el cliente de escritorio en Rust/Tauri y lo conecté al backend Convex del equipo, con tokens de sesión y conversaciones aisladas por cuenta.',
+    highlights: ['Asistente de aprendizaje contextual', 'App de escritorio multiplataforma en Rust/Tauri', 'Visión y RAG con conversaciones por cuenta'],
     stack: ['JavaScript', 'Tauri', 'Convex', 'OpenAI', 'RAG', 'Vector Search', 'Tavily'],
     image: michiTeachPreview,
     url: 'https://github.com/0wex/michi-teach/tree/main',
@@ -118,12 +118,12 @@ const projects: Project[] = [
     number: '03',
     title: 'incloudy',
     category: 'Realtime Hackathon 2026',
-    text: 'Plataforma privada para acompañar casos educativos mediante colaboración en tiempo real y orientación asistida por IA.',
-    highlights: ['Espacio privado para casos educativos', 'Colaboración entre participantes', 'Orientación durante cada caso'],
-    stack: ['React', 'FastAPI', 'MongoDB', 'Portal', 'Gemini'],
+    text: 'Plataforma de acompañamiento en tiempo real para estudiantes con necesidades educativas especiales. Desarrollé el backend FastAPI + MongoDB con API REST, autenticación JWT y webhooks firmados, e integré el Portal SDK para presencia y mensajería en tiempo real.',
+    highlights: ['Backend FastAPI + MongoDB con JWT', 'Presencia y mensajería en tiempo real', 'Webhooks firmados para auditar eventos'],
+    stack: ['Python', 'React', 'FastAPI', 'MongoDB', 'Portal', 'Gemini'],
     image: incloudyPreview,
     url: 'https://github.com/realtime-hackaton-2026/incloudy',
-    demoUrl: 'https://incloudy-lovat.vercel.app',
+    demoUrl: 'https://incloudy-lovat.vercel.app/#/login',
     preview: 'incloudy',
   },
   {
@@ -155,7 +155,7 @@ const pages: Record<ContentPage, PageContent> = {
     index: '02',
     eyebrow: 'Perfil / Trayectoria',
     title: 'Sobre mí',
-    description: 'Desarrollador de software. Llevo la inteligencia artificial al producto para que cada entrega se note en el negocio.',
+    description: 'Software Engineer backend con Python y FastAPI. Llevo la IA —y el desarrollo con agentes— al producto para que cada entrega se note en el negocio.',
     items: [],
   },
   proyectos: {
@@ -187,11 +187,11 @@ const pages: Record<ContentPage, PageContent> = {
 const pagesEn: Record<ContentPage, PageContent> = {
   'sobre-mi': {
     index: '02', eyebrow: 'Profile / Background', title: 'About me',
-    description: 'Software developer. I bring AI into the product so every release shows up in the business.',
+    description: 'Backend Software Engineer with Python and FastAPI. I bring AI —and agentic development— into the product so every release shows up in the business.',
     items: [
       { number: '01', title: 'Focus', text: 'Backend development, REST API design, business logic and service integrations.' },
-      { number: '02', title: 'Technologies', text: 'Python, FastAPI, PostgreSQL, Docker, REST APIs, Git and React.' },
-      { number: '03', title: 'Availability', text: 'Arequipa, Peru. Available for remote opportunities and collaborations.' },
+      { number: '02', title: 'Technologies', text: 'Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Docker and agentic development with Cursor and Claude Code.' },
+      { number: '03', title: 'Availability', text: 'Arequipa, Peru. Available for remote or hybrid opportunities and collaborations.' },
     ],
   },
   proyectos: {
@@ -227,12 +227,13 @@ const aboutEs = [
   {
     title: 'Stack',
     groups: [
-      { label: 'Lenguajes. ', value: 'Python, SQL, JavaScript y TypeScript.' },
-      { label: 'Backend. ', value: 'FastAPI, REST, SQLAlchemy y JWT.' },
-      { label: 'Datos. ', value: 'PostgreSQL y MongoDB.' },
-      { label: 'Cloud. ', value: 'AWS (S3, Lambda, DynamoDB), Docker y Docker Compose.' },
-      { label: 'Frontend. ', value: 'React y Tailwind CSS.' },
-      { label: 'Práctica. ', value: 'Pytest y Git.' },
+      { label: 'Lenguajes. ', value: 'Python, SQL, JavaScript/TypeScript y Rust.' },
+      { label: 'Backend. ', value: 'FastAPI, REST APIs, SQLAlchemy, Alembic y JWT.' },
+      { label: 'Datos. ', value: 'PostgreSQL, MongoDB y ETL.' },
+      { label: 'Cloud. ', value: 'AWS (S3, Lambda, DynamoDB), Docker, Docker Compose, GitHub Actions, Railway y Vercel.' },
+      { label: 'Testing. ', value: 'Pytest y tests de integración.' },
+      { label: 'Agentic. ', value: 'Desarrollo multiagente basado en contexto y skills, con Cursor y Claude Code.' },
+      { label: 'Frontend e IA. ', value: 'React, Tailwind CSS, RAG, OpenAI y Gemini.' },
     ],
   },
   {
@@ -250,12 +251,12 @@ const aboutEs = [
           </>
         ),
         points: [
-          <><strong>NEX.IA</strong> es un ERP peruano todo en uno para pymes. Integra compras, almacén, producción, ventas y tesorería, y genera la contabilidad a partir de la operación.</>,
-          <>Pipeline de onboarding de datos con <strong>FastAPI</strong>, <strong>SQLAlchemy 2</strong> y <strong>PostgreSQL</strong>, con dry-run y carga transaccional idempotente. El primer cliente migró <strong>sin duplicados</strong> y <strong>sin datos a medias</strong>.</>,
-          <>Generador de libros electrónicos <strong>SUNAT (PLE 5.1, 5.3, 6.1 y 14.1)</strong> sobre un núcleo REST reutilizable. Cada archivo pasa el <strong>validador oficial</strong> y un formato nuevo pide cambios mínimos.</>,
-          <>Casos borde de integridad financiera y multiempresa —notas sin factura, diferencia de cambio en USD y filtros por empresa— con migraciones <strong>Alembic</strong> y tests de integración. Se eliminaron los <strong>ajustes manuales</strong>.</>,
-          <>Pipeline de exportación de reportes con validación de integridad en tiempo real y telemetría en el dashboard. El formato y la validación previa quedaron automatizados y <strong>bajaron los errores de salida en producción</strong>.</>,
-          <>Flujo con IA (<strong>Claude</strong> y <strong>Cursor</strong>): diseño la solución, uso la IA para acelerar y reviso cada cambio antes del commit. <strong>1.143 tests en verde</strong>.</>,
+          <><strong>NEX.IA</strong> es un ERP multiempresa para pymes peruanas.</>,
+          <>Onboarding de datos de clientes con <strong>FastAPI</strong>, <strong>SQLAlchemy 2</strong> y <strong>PostgreSQL</strong>: plantilla Excel validada completa en dry-run, errores por hoja y fila, y carga transaccional idempotente. Habilité cargar el <strong>año contable de un cliente real</strong> desde Excel de SUNAT.</>,
+          <>Libros <strong>PLE de SUNAT (5.1, 5.3, 6.1, 8.1 y 14.1; R.S. 108-2020)</strong> aprobados por el validador <strong>al primer intento</strong>, trabajando con la contadora y el jefe contable para convertir requisitos contables en funcionalidades.</>,
+          <>Cerré la brecha de esquema con migraciones <strong>Alembic</strong> (<strong>34 tablas</strong> con PK, FK e índices; <strong>134 en total</strong>) y modelé casos borde multiempresa —notas sin factura, diferencia de cambio USD— con tests de integración.</>,
+          <>Endurecí el login (validación de entrada <strong>CWE-20</strong>, límite de bcrypt, rechazo de campos desconocidos) y recorrí <strong>45 pantallas y 455 consultas</strong> para corregir errores 500 y fallos silenciosos.</>,
+          <>Orquesté y delegué tareas a agentes (<strong>Claude</strong> y <strong>Cursor</strong>): <strong>57 PRs integrados en 10 semanas</strong> sobre una suite de <strong>1.143 tests</strong>.</>,
         ],
       },
       {
@@ -274,7 +275,6 @@ const aboutEs = [
           <>Endpoints REST con <strong>FastAPI</strong> y <strong>PostgreSQL</strong>, integrando la lógica de negocio de la plataforma en producción.</>,
           <>Tiempo de carga de los dashboards de <strong>5 s a 0,1 s (98 %)</strong>, con tablas de agregación diaria y semanal procesadas por un ETL nocturno, en lugar de consultas con varios JOIN en tiempo real.</>,
           <>Assets de la aplicación publicados en <strong>Amazon S3</strong> e integrados desde los servicios y componentes del sistema.</>,
-          <>Componentes en <strong>React</strong> que consumen y visualizan los datos de los endpoints REST.</>,
         ],
       },
     ],
@@ -282,10 +282,11 @@ const aboutEs = [
   {
     title: 'Estudios',
     points: [
-      'Carrera técnica en Desarrollo de Sistemas de Información, 2024–2026, en curso.',
-      'Summer Tech Bootcamp en aplicaciones de IA, cloud computing y ciberseguridad, julio de 2026.',
-      'Formación complementaria en Claude Code y AI Skills Fest 2026.',
-      'Certificaciones en curso: AWS Certified Developer – Associate y MongoDB Associate Developer.',
+      'Carrera técnica en Desarrollo de Sistemas de Información en ISAM (Instituto Superior Antúnez de Mayolo), 2024–2026, en curso.',
+      'Summer Tech Bootcamp — AI Applications, Cloud Computing & Cybersecurity en OPIT (Open Institute of Technology), julio de 2026.',
+      'Formación complementaria: Claude Code in Action (Anthropic) y AI Skills Fest 2026 (Microsoft).',
+      'Certificaciones con examen programado: MongoDB Associate Developer (Python), enero de 2027, y AWS Certified Developer – Associate (DVA-C03), febrero de 2027.',
+      'Idiomas: español nativo e inglés B1.',
     ],
   },
   {
@@ -315,12 +316,13 @@ const aboutEn = [
   {
     title: 'Stack',
     groups: [
-      { label: 'Languages. ', value: 'Python, SQL, JavaScript and TypeScript.' },
-      { label: 'Backend. ', value: 'FastAPI, REST, SQLAlchemy and JWT.' },
-      { label: 'Data. ', value: 'PostgreSQL and MongoDB.' },
-      { label: 'Cloud. ', value: 'AWS (S3, Lambda, DynamoDB), Docker and Docker Compose.' },
-      { label: 'Frontend. ', value: 'React and Tailwind CSS.' },
-      { label: 'Practice. ', value: 'Pytest and Git.' },
+      { label: 'Languages. ', value: 'Python, SQL, JavaScript/TypeScript and Rust.' },
+      { label: 'Backend. ', value: 'FastAPI, REST APIs, SQLAlchemy, Alembic and JWT.' },
+      { label: 'Data. ', value: 'PostgreSQL, MongoDB and ETL.' },
+      { label: 'Cloud. ', value: 'AWS (S3, Lambda, DynamoDB), Docker, Docker Compose, GitHub Actions, Railway and Vercel.' },
+      { label: 'Testing. ', value: 'Pytest and integration tests.' },
+      { label: 'Agentic. ', value: 'Context-based multi-agent development and skills, with Cursor and Claude Code.' },
+      { label: 'Frontend & AI. ', value: 'React, Tailwind CSS, RAG, OpenAI and Gemini.' },
     ],
   },
   {
@@ -338,12 +340,12 @@ const aboutEn = [
           </>
         ),
         points: [
-          <><strong>NEX.IA</strong> is an all-in-one Peruvian ERP for small businesses. It covers purchasing, warehouse, production, sales and treasury, and builds the accounting from the operation.</>,
-          <>A data onboarding pipeline with <strong>FastAPI</strong>, <strong>SQLAlchemy 2</strong> and <strong>PostgreSQL</strong>, with a dry run and an idempotent transactional load. The first client migrated <strong>with no duplicates</strong> and <strong>no half-written records</strong>.</>,
-          <>A <strong>SUNAT</strong> electronic-books generator <strong>(PLE 5.1, 5.3, 6.1 and 14.1)</strong> on a reusable REST core. Every file passes the <strong>official validator</strong>, and a new format needs only a small change.</>,
-          <>Financial-integrity and multi-company edge cases —notes without an invoice, USD exchange differences and per-company filters— covered with <strong>Alembic</strong> migrations and integration tests. <strong>Manual adjustments went away</strong>.</>,
-          <>A report-export pipeline with real-time integrity checks and dashboard telemetry. Formatting and the pre-check are automated, and <strong>output errors in production went down</strong>.</>,
-          <>An AI workflow with <strong>Claude</strong> and <strong>Cursor</strong>: I design the solution, use AI to move faster, and review every change before the commit. <strong>1,143 tests staying green</strong>.</>,
+          <><strong>NEX.IA</strong> is a multi-company ERP for Peruvian small businesses.</>,
+          <>Client data onboarding with <strong>FastAPI</strong>, <strong>SQLAlchemy 2</strong> and <strong>PostgreSQL</strong>: a fully validated Excel template in dry-run, per-sheet and per-row errors, and an idempotent transactional load. I enabled loading a <strong>real client's fiscal year</strong> from SUNAT Excel files.</>,
+          <><strong>SUNAT PLE books (5.1, 5.3, 6.1, 8.1 and 14.1; R.S. 108-2020)</strong> approved by the validator <strong>on the first attempt</strong>, working with the accountant and the head accountant to turn accounting requirements into features.</>,
+          <>Closed the schema gap with <strong>Alembic</strong> migrations (<strong>34 tables</strong> with PKs, FKs and indexes; <strong>134 in total</strong>) and modeled multi-company edge cases —notes without an invoice, USD exchange differences— with integration tests.</>,
+          <>Hardened the login (input validation <strong>CWE-20</strong>, bcrypt limit, rejection of unknown fields) and walked <strong>45 screens and 455 queries</strong> to fix 500 errors and silent failures.</>,
+          <>Orchestrated and delegated tasks to agents (<strong>Claude</strong> and <strong>Cursor</strong>): <strong>57 PRs merged in 10 weeks</strong> over a suite of <strong>1,143 tests</strong>.</>,
         ],
       },
       {
@@ -362,7 +364,6 @@ const aboutEn = [
           <>REST endpoints with <strong>FastAPI</strong> and <strong>PostgreSQL</strong>, wiring the business logic of the platform in production.</>,
           <>Dashboard load time from <strong>5s to 0.1s (98%)</strong>, using daily and weekly aggregation tables processed by a nightly ETL instead of multi-JOIN queries at request time.</>,
           <>Application assets published on <strong>Amazon S3</strong> and served from the system services and components.</>,
-          <><strong>React</strong> components that read and display the data from the REST endpoints.</>,
         ],
       },
     ],
@@ -370,10 +371,11 @@ const aboutEn = [
   {
     title: 'Studies',
     points: [
-      'Technical degree in Information Systems Development, 2024–2026, in progress.',
-      'Summer Tech Bootcamp in AI applications, cloud computing and cybersecurity, July 2026.',
-      'Further study in Claude Code and AI Skills Fest 2026.',
-      'Certifications in progress: AWS Certified Developer – Associate and MongoDB Associate Developer.',
+      'Technical degree in Information Systems Development at ISAM (Instituto Superior Antúnez de Mayolo), 2024–2026, in progress.',
+      'Summer Tech Bootcamp — AI Applications, Cloud Computing & Cybersecurity at OPIT (Open Institute of Technology), July 2026.',
+      'Further training: Claude Code in Action (Anthropic) and AI Skills Fest 2026 (Microsoft).',
+      'Certification exams scheduled: MongoDB Associate Developer (Python), January 2027, and AWS Certified Developer – Associate (DVA-C03), February 2027.',
+      'Languages: native Spanish and B1 English.',
     ],
   },
   {
@@ -383,9 +385,9 @@ const aboutEn = [
 ]
 
 const projectEnglish = [
-  { category: 'The Next Craft Hackathon — 1st place in Arequipa and Peru · 2nd place in LATAM', text: 'Learning assistant that analyzes the screen and provides contextual help in real time with multimodal AI and RAG. I contributed to the MVP and integrated AI, persistence and real-time features with Convex.', highlights: ['Contextual learning assistant', 'Real-time screen analysis', 'Knowledge base with RAG'] },
+  { category: 'The Next Craft Hackathon — 1st place in Arequipa and Peru · 2nd place in LATAM', text: 'Desktop app that assists the user in real time with multimodal AI and RAG based on their visual context. I built the Rust/Tauri desktop client and connected it to the team Convex backend, with session tokens and per-account isolated conversations.', highlights: ['Contextual learning assistant', 'Cross-platform desktop app in Rust/Tauri', 'Vision and RAG with per-account conversations'] },
   { category: 'OPIT Summer Tech Bootcamp', text: 'Full-stack guestbook that stores messages and detects their sentiment in real time using AWS services.', highlights: ['Full-stack guestbook', 'Message storage', 'Sentiment classification'] },
-  { category: 'Realtime Hackathon 2026', text: 'Private platform for supporting educational cases through real-time collaboration and AI-assisted guidance.', highlights: ['Private educational-case workspace', 'Participant collaboration', 'Guidance through each case'] },
+  { category: 'Realtime Hackathon 2026', text: 'Real-time support platform for students with special educational needs. I built the FastAPI + MongoDB backend with a REST API, JWT authentication and signed webhooks, and integrated the Portal SDK for real-time presence and messaging.', highlights: ['FastAPI + MongoDB backend with JWT', 'Real-time presence and messaging', 'Signed webhooks to audit events'] },
   { category: 'Local AI / RAG', text: 'Private knowledge workspace that indexes documents and enables semantic search with locally hosted AI.', highlights: ['Private document library', 'Queries over indexed content', 'Locally executed processing'] },
   { category: 'Product / Finance', text: 'Application focused on organizing and visualizing personal finances through a clear and accessible experience.', highlights: ['Personal finance organization', 'Clear information visualization', 'Simple accessible experience'] },
 ]
@@ -457,8 +459,8 @@ export function PageTemplate({ page, language }: PageTemplateProps) {
         <article className="about">
           <p className="about__role">
             {language === 'es'
-              ? 'Software Engineer · Backend · IA aplicada · 1+ años de experiencia'
-              : 'Software Engineer · Backend · Applied AI · 1+ years of experience'}
+              ? 'Software Engineer · Backend Python · FastAPI · Agentic Software Development · Arequipa, Perú — remoto / híbrido'
+              : 'Software Engineer · Backend Python · FastAPI · Agentic Software Development · Arequipa, Peru — remote / hybrid'}
           </p>
           <div className="about__actions">
             <a
